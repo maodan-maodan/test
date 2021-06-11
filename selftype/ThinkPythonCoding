@@ -1,0 +1,50 @@
+'''
+
+def right_justify(s):
+    for i in range(70-int(len(s))):
+        print(' ',end='')
+    print(s)
+right_justify('monty')
+print(70-int(len('monty')))
+'''
+
+'''
+def do_twice(spam,f):
+    f(spam)
+    f(spam)
+def print_spam(spam):
+    print(spam)
+def do_print_twice(spam,f):
+    do_twice(spam,f)
+    do_twice(spam,f)
+do_print_twice('xx',print_spam)
+'''
+'''
++ - - - - + - - - - +
+|         |         |
+|         |         |
+|         |         |
+|         |         |
++ - - - - + - - - - +
+|         |         |
+|         |         |
+|         |         |
+|         |         |
++ - - - - + - - - - +
+'''
+def print_line(x):
+    print(x)
+def do_twice(x,f):
+    f(x)
+    f(x)
+def do_four(x,f):
+    do_twice(x,f)
+    do_twice(x,f)
+def do_print(x,y,f):
+    print(x)
+    do_four(y,f)
+def do_final_print(x,y,f,g):
+
+    do_twice(x,g)
+    print(x)
+do_final_print('+ - - - - + - - - - +','|         |         |',print_line,do_print)
